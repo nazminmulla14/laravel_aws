@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\{EmployeeController,StudentController};
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,3 +26,12 @@ Route::get('/employees/{id}/edit', [EmployeeController::class, 'edit'])->name('e
 Route::put('/employees/{id}/update', [EmployeeController::class, 'update'])->name('employees.update');
 Route::get('/employees/{id}/delete', [EmployeeController::class, 'destroy'])->name('employees.destroy');
 
+//commment
+
+Route::get('/students', [StudentController::class, 'index'])->name('students.index');
+Route::get('/students/create', [StudentController::class, 'create'])->name('students.create');
+Route::post('/students/store', [StudentController::class, 'store'])->name('students.store');
+Route::get('/students/{id}', [StudentController::class, 'show'])->name('students.show');
+Route::get('/students/{id}/edit', [StudentController::class, 'edit'])->name('students.edit');
+Route::put('/students/{id}/update', [StudentController::class, 'update'])->name('students.update');
+Route::get('/students/{id}/delete', [StudentController::class, 'destroy'])->name('students.destroy');
