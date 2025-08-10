@@ -23,7 +23,7 @@ class StudentController extends Controller
     {
         $request->validate([
             'name'     => 'required',
-            'email'    => 'required|email|unique:Students',
+            'email'    => 'required|email|unique:students',
             'phone'    => 'required',
             'position' => 'required',
             'profile'  => 'nullable|image|mimes:jpg,jpeg,png|max:2048'
@@ -66,7 +66,7 @@ class StudentController extends Controller
 
         $request->validate([
             'name'     => 'required',
-            'email'    => 'required|email|unique:Students,email,' . $student->id,
+            'email'    => 'required|email|unique:students,email,' . $student->id,
             'phone'    => 'required',
             'position' => 'required',
             'profile'  => 'nullable|image|mimes:jpg,jpeg,png|max:2048'
