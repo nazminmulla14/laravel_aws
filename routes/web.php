@@ -13,7 +13,8 @@ use App\Http\Controllers\{EmployeeController,StudentController};
 |
 */
 Route::get('/', function () {
-    return redirect()->route('employees.index');
+    // return redirect()->route('employees.index');
+    return view('welcome');
 });
 
 
