@@ -1,6 +1,11 @@
 @extends('layout')
 
 @section('content')
+    <style>
+        * {
+            color: red;
+        }
+    </style>
     <h2>students</h2>
     <a href="{{ route('students.create') }}" class="btn btn-primary mb-3">Add Student</a>
 
